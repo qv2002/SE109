@@ -1,3 +1,4 @@
+
 .productsHeading {
     margin: 2vmax auto;
     width: 15vw;
@@ -12,7 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 5vmax;
-    justify-content: center;
+    margin-left: 10vmax;
+    justify-content: left;
     min-height: 30vh;
 }
 
@@ -70,7 +72,7 @@
 
 .filterBox {
     width: 10vmax;
-    position: absolute;
+    position: fixed;
     top: 10vmax;
     left: 4vmax;
 }
@@ -83,9 +85,10 @@
     list-style: none;
     color: rgba(0, 0, 0, 0.61);
     font: 400 0.8vmax "Roboto";
-    margin: 0.4vmax;
+    margin: 1vmax 0.4vmax;
     cursor: pointer;
     transition: all 0.5s;
+    font-size: 12px;
 }
 
 .category-link:hover {
@@ -96,6 +99,9 @@
     border: 1px solid rgba(0, 0, 0, 0.329);
 }
 
+.filterBox-moblie {
+    display: none;
+}
 /* PC */
 @media (min-width: 64em)
 {
@@ -133,6 +139,9 @@
         font-size: 10px;
         margin: 4px 0;
     }
+    .category-link {
+        font-size: 18px;
+    }
 }
 /* Tablet */
 @media (min-width: 46.25em) and (max-width: 63.9375em)
@@ -153,5 +162,20 @@
     .products a .MuiRating-sizeLarge {
         width: 100%;
         font-size: 16px;
+    }
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5vmax;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        min-height: 30vh;
+    }
+    .filterBox {
+        display: block;
+    }
+    .filterBox-moblie {
+        display: block;
     }
 }
