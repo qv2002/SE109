@@ -66,6 +66,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+    background-color: #f7f7f7;
 }
 
 .productCard {
@@ -77,6 +78,8 @@
     margin: 2vmax;
     transition: all 0.5s;
     padding-bottom: 0.5vmax;
+    padding: 4px;
+    background-color: #ffffff;
 }
 
 .productCard>img {
@@ -86,17 +89,24 @@
 .productCard>div {
     margin: 0.5vmax;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+}
+
+.productCard > div > span > .MuiRating-decimal {
+    font-size: 28px;
 }
 
 .productCardSpan {
     margin: 0.5vmax;
     font: 300 0.7vmax "Roboto";
+    font-size: 12px;
+    font-style: italic;
 }
 
 .productCard>p {
     font-family: "Roboto";
-    font-size: 1.2vmax;
+    font-size: 12px;
     margin: 1vmax 0.5vmax;
     margin-bottom: 0;
 }
@@ -105,7 +115,7 @@
     margin: 0.5vmax;
     color: rgba(17, 17, 17, 0.795);
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-size: 1vmax;
+    font-size: 12px;
 }
 
 .productCard:hover {
@@ -115,21 +125,61 @@
 }
 
 @media screen and (max-width: 600px) {
-    .productCard>p {
-        font-size: 1.7vmax;
-    }
 
-    .productCard>div {
-        margin: 0vmax;
-        display: block;
+}
+/* PC */
+@media (min-width: 64em)
+{
+}
+/* Tablet vs Mobile */
+@media (max-width: 63.9375em) {
+    .container {
+        background-color: #f0f0f0;
     }
-
+    .productCard {
+        border-radius: 1px;
+        padding: 8px;
+        background-color: #ffffff;
+    }
     .productCard>span {
-        font-size: 1.5vmax;
+        font-size: 14px;
+        margin: 4px 2px;
+    }
+}
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em)
+{
+    .productCard > div > span > .MuiRating-decimal {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .productCard>p {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+
+    .productCard > div {
+        text-align: center;
+        margin: 4px 0;
+        display: flex;
     }
 
     .productCard>div>span {
         margin: 0 0.5vmax;
         font: 300 1vmax "Roboto";
+    }
+
+    .productCard > div > .productCardSpan{
+        text-align: center;
+        font-size: 12px;
+        margin: 2px 0;
+    }
+
+    .productCard > div > span > .MuiRating-decimal {
+        font-size: 17px;
+        margin: auto;
     }
 }
