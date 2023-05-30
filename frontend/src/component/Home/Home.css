@@ -1,12 +1,12 @@
 .banner {
-    background-image: linear-gradient(to right, black, white);
+    background-image: linear-gradient(to right, rgb(247, 180, 117), white);
     height: 100vmin;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .banner>h1 {
@@ -36,7 +36,7 @@
     color: white;
 }
 
-.banner::after {
+/* .banner::after {
     content: "";
     width: 100vw;
     height: 100vmin;
@@ -46,7 +46,7 @@
     left: 0;
     clip-path: polygon(100% 68%, 0 100%, 100% 100%);
     max-width: 100%;
-}
+} */
 
 .homeHeading {
     text-align: center;

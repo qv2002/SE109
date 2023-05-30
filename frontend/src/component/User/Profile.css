@@ -23,6 +23,7 @@
     color: rgba(0, 0, 0, 0.555);
     font: 500 2.2vmax "Roboto";
     transform: translateX(-10vmax) translateY(-2vmax);
+    margin-left: 250px;
 }
 
 .profileContainer>div:first-child>img {
@@ -137,3 +138,7 @@
         margin: 2vmax 0;
     }
 }
+
+
+
+  
