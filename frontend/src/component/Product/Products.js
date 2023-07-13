@@ -98,7 +98,7 @@ const Products = ({ match }) => {
 
                     </div>
                 )}
-                <h1 class="filterBox-moblie">haahaha</h1>
+                {/* <h1 class="filterBox-moblie">haahaha</h1> */}
             </Fragment>
         }
         </Fragment>

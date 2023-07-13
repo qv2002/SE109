@@ -1,11 +1,52 @@
 .speedDial {
     position: fixed;
     right: 3vmax;
-    top: 3vmax;
+    top: 1.2vmax;
 }
 
 .speedDialIcon {
-    width: 56px;
-    height: 56px;
+    width: 58px;
+    height: 58px;
     border-radius: 100%;
 }
+
+.navigation {
+    margin-right: 10%;
+}
+
+.MuiDrawer-paperAnchorLeft {
+    width: 40% !important;
+}
+
+.MuiList-padding {
+    padding-top: 0 !important;
+}
+
+.MuiSvgIcon-root {
+    font-size: 2.2rem !important;
+}
+
+.listItem {
+    border-radius: 20px !important;
+    margin-top: 4px !important;
+}
+
+.MuiListItem-button  {
+    margin-right: 8px !important;
+    color: #0F0F0F;
+}
+
+.MuiListItem-button:hover {
+    background-color: rgb(242,242,242) !important;
+}
+
+.MuiListItemText-primary {
+    line-height: 32px !important;
+    padding: 5px !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+}
+
+
+
+  
+
