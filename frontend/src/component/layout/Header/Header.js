@@ -83,7 +83,7 @@ const Header = () => {
       <Toolbar>
         {isMobile ? (
         <>
-          <IconButton color="black" onClick={handleDrawerOpen}>
+          <IconButton color="default" onClick={handleDrawerOpen}>
             <Menu />
           </IconButton>
           <Typography variant="h6" component="div" style={{ display: "flex", alignItems: "center", cursor: "pointer", margin: "auto" }} onClick={handleLogoClick}>

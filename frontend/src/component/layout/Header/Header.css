@@ -46,7 +46,9 @@
     font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
 
-
-
+.MuiFab-sizeSmall {
+    height: 48px !important;
+    width: 48px !important;
+}
   
 

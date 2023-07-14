@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import FaceIcon from "@material-ui/icons/Face";
+import FacebookIcon from '@mui/icons-material/Facebook';
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
@@ -137,6 +138,13 @@ const LoginSignUp = ({ history, location }) => {
                                 </div>
                                 <Link to="/password/forgot">Đặt lại mật khẩu</Link>
                                 <input type="submit" value="Đăng nhập" className="loginBtn" />
+
+                                <div className="loginFaceBook">
+                                    <FacebookIcon style={{ color: "#ffffff", marginRight: "5px", verticalAlign: "middle" }} />
+                                    <a href="/login" className="loginBtn" style={{textAlign: "center", backgroundColor: "#3b5998", textDecoration: "none" }}>Đăng nhập bằng Facebook</a>
+                                </div>
+
+
                             </form>
                             <form
                                 className="signUpForm"

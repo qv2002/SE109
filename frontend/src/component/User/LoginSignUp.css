@@ -85,7 +85,7 @@
 .signUpForm>div>svg {
     position: absolute;
     transform: translateX(1vmax);
-    font-size: 1.6vmax;
+    font-size: 2.4vmax !important;
     color: rgba(0, 0, 0, 0.623);
 }
 
@@ -99,6 +99,7 @@
 
 .loginForm>a:hover {
     color: black;
+
 }
 
 #registerImage>img {
@@ -165,7 +166,7 @@
     transform: translateX(100%);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 63.9375em) {
     .LoginSignUpContainer {
         background-color: white;
     }
@@ -197,10 +198,12 @@
     .loginForm>div>svg,
     .signUpForm>div>svg {
         font-size: 2.8vmax;
+
     }
 
     .loginForm>a {
-        font: 500 1.8vmax "Gill Sans";
+        font: 500 2.8vmax "Gill Sans" !important;
+        margin-right: 10px;
     }
 
     #registerImage>img {
@@ -217,5 +220,13 @@
     .signUpBtn {
         font: 300 1.9vmax "Roboto";
         padding: 1.8vmax;
+    }
+}
+
+@media (max-width: 46.1875em) {
+    .loginForm>div>svg,
+    .signUpForm>div>svg {
+        width: 20px;
+        height: 20px;
     }
 }
