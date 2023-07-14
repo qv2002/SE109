@@ -109,6 +109,8 @@ import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Home from "@material-ui/icons/Home";
+import LocalMallIcon from '@mui/icons-material/LocalMall';
 import { useHistory } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { logout } from "../../../actions/userAction";
@@ -124,6 +126,8 @@ const UserOptions = () => {
     const dispatch = useDispatch();
 
     const options = [
+        { icon: <Home />, name: "Trang chủ", func: home },
+        { icon: <LocalMallIcon />, name: "Sản phẩm", func: products },
         { icon: <ListAltIcon />, name: "Đơn hàng", func: orders },
         { icon: <PersonIcon />, name: "Tài khoản", func: account },
         {
@@ -154,6 +158,12 @@ const UserOptions = () => {
     }
     function cart() {
         history.push("/cart");
+    }
+    function products() {
+        history.push("/products");
+    }
+    function home() {
+        history.push("/");
     }
     function logoutUser() {
         dispatch(logout());
