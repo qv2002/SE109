@@ -14,6 +14,8 @@ exports.registerUser = catchAsynError(async (req, res, next) => {
     });
     const { name, email, password } = req.body;
 
+    const check = await User.findOne({email})
+    console.log('check: ' +  check);
     const user = await User.create({
         name, email, password,
         avatar: {
@@ -197,7 +199,6 @@ exports.updateProfile = catchAsynError(async (req, res, next) => {
         success: true,
     });
 });
-
 
 exports.getAllUser = catchAsynError(async (req, res, next) => {
     const users = await User.find();

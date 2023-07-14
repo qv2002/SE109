@@ -94,7 +94,7 @@
 }
 
 .productCard > div > span > .MuiRating-decimal {
-    font-size: 28px;
+    font-size: 300px;
 }
 
 .productCardSpan {
@@ -149,8 +149,8 @@
 /* Tablet */
 @media (min-width: 46.25em) and (max-width: 63.9375em)
 {
-    .productCard > div > span > .MuiRating-decimal {
-        font-size: 20px;
+    .productCard > div > span > .MuiRating-decimal > span > span > svg {
+        width: 20px !important;
     }
 }
 
@@ -178,8 +178,8 @@
         margin: 2px 0;
     }
 
-    .productCard > div > span > .MuiRating-decimal {
-        font-size: 17px;
+    .productCard > div > span > .MuiRating-decimal > span > span > svg {
+        font-size: 17px !important;
         margin: auto;
     }
 }
