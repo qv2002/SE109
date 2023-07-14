@@ -15,15 +15,19 @@ exports.registerUser = catchAsynError(async (req, res, next) => {
     const { name, email, password } = req.body;
 
     const check = await User.findOne({email})
-    console.log('check: ' +  check);
-    const user = await User.create({
-        name, email, password,
-        avatar: {
-            public_id: myCloud.public_id,
-            url: myCloud.secure_url,
-        }
-    })
-    sendToken(user, 201, res);
+    if (!check) {
+        const user = await User.create({
+            name, email, password,
+            avatar: {
+                public_id: myCloud.public_id,
+                url: myCloud.secure_url,
+            }
+        })
+        sendToken(user, 201, res);
+    }
+    else {
+        return next(new ErrorHander("User đã tồn tại", 400));
+    }
 })
 
 exports.loginUser = catchAsynError(async (req, res, next) => {
@@ -42,6 +46,10 @@ exports.loginUser = catchAsynError(async (req, res, next) => {
     }
     sendToken(user, 200, res);
 });
+
+exports.authGoogle = catchAsynError(async (req, res, next) => {
+    console.log('authGoogle')
+})
 
 exports.logout = catchAsynError(async (req, res, next) => {
 

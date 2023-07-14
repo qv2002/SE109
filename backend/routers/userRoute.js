@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const passport = require("passport");
 const { isAuthenticatedUser, authorieRoles } = require("../middleware/auth")
 
-const { registerUser, loginUser, logout, forgotPassword, resetPassword, getUserDetail, updatePassword, updateProfile, getAllUser, getSingleUser, deleteUser, updateUserRole } = require("../controllers/userController");
-
+const { registerUser, loginUser, authGoogle, logout, forgotPassword, resetPassword, getUserDetail, updatePassword, updateProfile, getAllUser, getSingleUser, deleteUser, updateUserRole } = require("../controllers/userController");
+const passportConfig = require("../middleware/passport")
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
+router.route("/auth/google").post(passport.authenticate('google-plus-token', {session : false}), authGoogle);
 
 
 router.route("/password/forgot").post(forgotPassword);

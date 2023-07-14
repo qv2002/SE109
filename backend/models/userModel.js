@@ -35,6 +35,19 @@ const userSchema = new mongooes.Schema({
             }
         }
     ],
+    authGoogleID: {
+        type: String,
+        default: null,
+    },
+    authFacebookID: {
+        type: String,
+        default: null,
+    },
+    authType:{
+        type: String,
+        emun: ['local', 'google', 'facebook'],
+        default: 'local',
+    },
     role: {
         type: String,
         default: "user",
