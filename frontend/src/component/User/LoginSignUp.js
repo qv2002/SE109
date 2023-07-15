@@ -140,16 +140,21 @@ const LoginSignUp = ({ history, location }) => {
                                 <Link to="/password/forgot">Đặt lại mật khẩu</Link>
                                 <input type="submit" value="Đăng nhập" className="loginBtn" />
 
-                                <div className="loginFaceBook">
-                                    <FacebookIcon style={{ color: "#ffffff", marginRight: "5px", verticalAlign: "middle" }} />
-                                    <a href="/login" className="loginBtn" style={{textAlign: "center", backgroundColor: "#3b5998", textDecoration: "none" }}>Đăng nhập bằng Facebook</a>
-                                </div>
+                                <button className="loginBtn" style={{ display: "flex", alignItems: "center", backgroundColor: "#3b5998", padding: "3px 5px" }}>
+                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                        <FacebookIcon style={{ color: "#ffffff", marginRight: "5px", verticalAlign: "middle" }} />
+                                    </div>
+                                    <div style={{ flex: 1, textAlign: "center" }}>
+                                        <a href="/login" style={{ textDecoration: "none", color: "white" }}>Đăng nhập với Facebook</a>
+                                    </div>
+                                </button>
 
-                                <div className="loginGoogle">
-                                    <GoogleIcon style={{ color: "#ffffff", marginRight: "5px", verticalAlign: "middle" }} />
-                                    <a href="/login" className="loginBtn" style={{textAlign: "center", backgroundColor: "#3b5998", textDecoration: "none" }}>Đăng nhập bằng Facebook</a>
-                                </div>
-
+                                <button className="loginBtn" style={{ display: "flex", alignItems: "center", backgroundColor: "#DF4B30", padding: "2px 5px" }}>
+                                    <div style={{ display: "flex", alignItems: "center" }}>
+                                        <GoogleIcon style={{ color: "#ffffff", marginRight: "5px", verticalAlign: "middle", padding: "0" }} />
+                                    </div>
+                                    <a href="/login" style={{ textDecoration: "none", color: "white" }}>Đăng nhập với Google</a>
+                                </button>
 
                             </form>
                             <form
